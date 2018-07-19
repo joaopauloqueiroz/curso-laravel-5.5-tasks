@@ -1,0 +1,119 @@
+Para usar uma classe criada por você mesmo e colocar como DI
+quando o metodo ou classe nao permite instancias voc e usa: 
+$var = app()->make(nomeClase::class);
+
+========
+===== Curso de laravel parte avançada =====
+========
+Seeders: https://videos.sproutvideo.com/embed/709adfb71912e3caf8/89fb82c73f45adb8?signature=9iwRVa4yfIpfutkRHZ4W8nwsThw%3D&expires=1531509080&type=hd
+
+Dados dinamicos: https://videos.sproutvideo.com/embed/e89adfb71912e3c460/1d76800d5f431e11?signature=fzo7cmH0gJGiAl%2Bm6qZEfuergLY%3D&expires=1531509932&type=hd
+
+Route model bind: https://videos.sproutvideo.com/embed/1c9adfb71912e3c594/1a8fb5416cfed7eb?signature=bnkxLcqKf45b0f7VdwdDt92%2Byf8%3D&expires=1531509994&type=hd
+
+Propriedade de forma pratica: https://videos.sproutvideo.com/embed/7c9adfb71912e2ccf4/192635c35457012f?signature=v6d6xUiCs0WLjulp4tNClICfmlg%3D&expires=1531510020&type=hd
+
+Relacionamento 1 para N: https://videos.sproutvideo.com/embed/4c9adfb71912e2c8c4/365a39a07299bed4?signature=AZnOLktybljMSmZuCg8ESGSRFyk%3D&expires=1531510062&type=hd
+
+Relacionamento N para N: https://videos.sproutvideo.com/embed/709adfb71912e2cbf8/84400f575e2767af?signature=v1qPiSYl6fVqxNC14FqQEvgWhKw%3D&expires=1531510090&type=hd
+
+Relacionando Cliente a projeto: https://videos.sproutvideo.com/embed/1c9adfb71912e2c494/1a567f5629be27c3?signature=v4R9wlcp8rojptgke4OMzHO%2B1wc%3D&expires=1531510121&type=hd
+
+====================
+Modulo 2: Laravel Query Builder
+
+Buscando dados com Query Builder: https://videos.sproutvideo.com/embed/489adfb71614e2c4c0/a8f64e26cf7f2c49?signature=Cg8zXZgHl9JlY3MMyhGd21qshlE%3D&expires=1531510181&type=hd
+
+Alterando dados com Query Builder: https://videos.sproutvideo.com/embed/d49adfb71614e2c75c/5f68e322bc8fe988?signature=a0zBDjU94h19X5%2FtyFqPRGgNqtU%3D&expires=1531510200&type=hd
+
+====================
+Modulo 3 Paginação
+
+Usando paginação no projeto: https://videos.sproutvideo.com/embed/4c9adfb71614e2c1c4/3a7a97e58f0ad3c1?signature=BRvxDins0C8d7j6PJyx5B2AlLJw%3D&expires=1531510251&type=hd
+
+=====================
+Modulo 4 Repositorios
+
+Motivações para o uso de Repositorios: https://videos.sproutvideo.com/embed/709adfb71614e2c2f8/19e5d040122b4277?signature=UUQ4QTidELSKBuEzs%2BWrdyIkxjI%3D&expires=1531510298&type=hd
+
+Criando repositorios base: https://videos.sproutvideo.com/embed/a49adfb71614e2c32c/9abd26c29495db77?signature=8IiSm6HU8%2FtPo19MgqoLzzkJLw4%3D&expires=1531510329&type=hd
+
+Criando repositorios de tarefa: https://videos.sproutvideo.com/embed/e89adfb71614e2cc60/157062d89f7c0d5d?signature=1gTGG1ly2teionZVQoCeWsS3Zbw%3D&expires=1531510346&type=hd
+
+Usando repositorio no projeto: https://videos.sproutvideo.com/embed/1c9adfb71614e2cd94/a7a24fcfd30f4f31?signature=rTtjJBvPL8Bs7ZN0Vsp%2B%2F2Z97Ic%3D&expires=1531510374&type=hd
+
+Metodo particular do repositorio: https://videos.sproutvideo.com/embed/489adfb71614e3c5c0/922285157f68a76f?signature=Lp96rDXX9urWfbaz%2Bzq9B5Zh7DY%3D&expires=1531510404&type=hd
+
+Trocando o repósitorio sem alterar o projeto: https://videos.sproutvideo.com/embed/a09adfb71614e3c728/9eeec5eca5d7baaa?signature=rUZu5Yk2b6OALsoREG8OTiDbh0Y%3D&expires=1531510429&type=hd
+
+=====================
+Modulo 5 Logs
+
+Trabalhando com log no projeto: https://videos.sproutvideo.com/embed/d49adfb71614e3c65c/8d68100ba1f20afd?signature=n6oRZtF0PBfNCsEfb8ORHGFyxTU%3D&expires=1531510473&type=hd
+
+Configurando os Logs: https://videos.sproutvideo.com/embed/4c9adfb71614e3c0c4/676dd85e6c894206?signature=kWcR8Fo7AzKj74WCe5tVdIkpH%2Bg%3D&expires=1531510500&type=hd
+
+===========================
+Modulo 6 response
+
+Manipulando o response: https://videos.sproutvideo.com/embed/709adfb71614e3c3f8/1a590b4f36038ea9?signature=U4dLIAzMC07XgX%2F1Q5UQvZ8hqEU%3D&expires=1531510537&type=hd
+
+Usando o redirect: https://videos.sproutvideo.com/embed/e89adfb71614e3cd60/aaec8ab27d7a7a1b?signature=fx3I9W2pRx7bEjBwRqNNE7Uwyy0%3D&expires=1531510647&type=hd
+
+Flash session no redirect: https://videos.sproutvideo.com/embed/1c9adfb71614e3cc94/8aeb71e6ac18b114?signature=1nmmDVf71luj%2F9gML7G5Zley13M%3D&expires=1531510671&type=hd
+
+Redirect with erros input: https://videos.sproutvideo.com/embed/7c9adfb71614e0c7f4/08f3191760649293?signature=q%2BrKeSzYdrUQQ%2F%2Falfw7RKKKm0k%3D&expires=1531510692&type=hd
+
+Respondendo json: https://videos.sproutvideo.com/embed/a09adfb71614e0c428/9055b586234d3692?signature=iFTJMq%2BDdNEwjsTTQecku%2FzN3q4%3D&expires=1531510721&type=hd
+
+Resposta para download e arquivo: https://videos.sproutvideo.com/embed/189adfb71614e0c290/bcb01e7750f11c9f?signature=8%2B%2Fm2Rqqc%2FfcznAr1swlV5IMvx0%3D&expires=1531510744&type=hd
+
+======================
+Modulo 7 Laravel Mix
+
+Instalação Laravel: https://videos.sproutvideo.com/embed/4c9adfb71614e0c3c4/793bcccf411aa962?signature=EbH3hkiqQp7gLTdqOBTahpIG52A%3D&expires=1531510804&type=hd
+
+Configurando laravel Mix: https://videos.sproutvideo.com/embed/709adfb71614e0c0f8/c753efb1fde5869f?signature=2lcQ28TmNvsbb6nQpJV5B6vuKls%3D&expires=1531510812&type=hd
+
+Preparando o projto que busca via ajax: https://videos.sproutvideo.com/embed/e89adfb71614e0ce60/00ac4ac76d8d0ed2?signature=CZT9%2B1ZqwLCVJao47r9BLkhFJvI%3D&expires=1531510846&type=hd
+
+Busca via ajax: https://videos.sproutvideo.com/embed/489adfb71614e1c7c0/e086def6940e9ddf?signature=Jd22dNG%2B34wy4gYQuk1u6ui%2FOTo%3D&expires=1531510879&type=hd
+
+=====================
+Modulo 8 RestFull
+Controller e rota api resource: https://videos.sproutvideo.com/embed/7c9adfb71614e1c6f4/924c2b6ddc076257?signature=rVMG8FUz0mHcdEepwYyLjGkOsI8%3D&expires=1531510910&type=hd
+
+Implementando metodos index e show da api: https://videos.sproutvideo.com/embed/a09adfb71614e1c528/8e0d2000912d161f?signature=2aKesB69VkVw1WrBSkCCh8gqeEA%3D&expires=1531510971&type=hd
+
+Outros metodos da api: https://videos.sproutvideo.com/embed/4c9adfb71614e1c2c4/507970c9611dbfb4?signature=cliUJA%2Fc0qEOx0t9dDcUBZvM9IA%3D&expires=1531510988&type=hd
+
+==================
+Modulo 9 Finalização do projeto
+
+Adição de tarefas para fazer de modo visual: https://videos.sproutvideo.com/embed/e89adfb71614e1cf60/843ebfc7f3bcde4f?signature=lNa9PQG5dgCgSaWaeZ1PoTyRZCA%3D&expires=1531511033&type=hd
+
+Implementado lista de tarefas para fazer: https://videos.sproutvideo.com/embed/d49adfb71614e6c35c/c34ce81333989d6f?signature=lV14%2F4V3Olz7jl3VL0sbLJYbFks%3D&expires=1531511065&type=hd
+
+Marcando tarefas como executadas: https://videos.sproutvideo.com/embed/4c9adfb71614e6c5c4/1a4028a5413cf0a5?signature=6ZwIMD%2FGNS7AitR4mc9tyyG6NxY%3D&expires=1531511089&type=hd
+
+Listar os projetos relacionados a tarefa: https://videos.sproutvideo.com/embed/709adfb71614e6c6f8/ea68b385643c2720?signature=y3JnC7sYojeJNTPujhYsH1nMN34%3D&expires=1531511115&type=hd
+
+Relacionando projetos a tarefa: https://videos.sproutvideo.com/embed/1c9adfb71614e6c994/ec0d7574acf97a68?signature=dKyLrm5mnPQ8AgdIoWy%2FQy2pyV4%3D&expires=1531511141&type=hd
+
+Finalizando projeto: https://videos.sproutvideo.com/embed/489adfb71614e7c1c0/812b6f62b4979103?signature=a0rR1VrXqfL2j9ei4WHJuHanFCw%3D&expires=1531511158&type=hd
+
+Padronizando o codigo do projeto: https://videos.sproutvideo.com/embed/a09adfb71614e7c328/322d85c0a49cb775?signature=LyzmeBVQoN89G9oXjKn7Cu%2FjtJc%3D&expires=1531511180&type=hd
+
+====================
+Modulo 10 Deploy na digital ocean
+
+Criando a VPS na digital ocean: https://videos.sproutvideo.com/embed/d49adfb71614e7c25c/98e1e0b1b7138e56?signature=OgGekGEpYtBOeFhDR9EANr%2B4GZk%3D&expires=1531511293&type=hd
+
+Configurando o servidor com ServerPilot: https://videos.sproutvideo.com/embed/189adfb71614e7c590/c99562ee11ecf2ec?signature=MGPLVonY513Q%2FomnqB%2F9SJXuMMI%3D&expires=1531511322&type=hd
+
+Enviado os arquivos para o servidor: https://videos.sproutvideo.com/embed/4c9adfb71614e7c4c4/21775c81206231d5?signature=ukIncEj5Fi3AG3%2FPqxNBrd5g68A%3D&expires=1531511357&type=hd
+
+Configurar projetos e instalar dependencias: https://videos.sproutvideo.com/embed/a49adfb71614e7c62c/6efe28772bf32b99?signature=Xge8C%2FXBumfsSGlO8DHRaylW3Zk%3D&expires=1531511409&type=hd
+
+Preparando assets para produção: https://videos.sproutvideo.com/embed/a49adfb71614e7c62c/6efe28772bf32b99?signature=Xge8C%2FXBumfsSGlO8DHRaylW3Zk%3D&expires=1531511409&type=hd
+
