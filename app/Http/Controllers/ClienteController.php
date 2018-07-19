@@ -37,7 +37,7 @@ class ClienteController extends Controller
         // $request->session()->put('framework','Laravel');
         // session(['versao'=>'5.6']);
         //var_dump(session('todotasks'));
-        $clients = $this->client->paginate(3);
+        $clients = $this->client->paginate();
 
         return view('clients.index', compact('clients'));
     }

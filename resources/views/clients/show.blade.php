@@ -12,7 +12,7 @@
         <p>O email do cliente é {{ $client->email }}</p>
         <p>O idade do cliente é {{ $client->age }}</p>
 
-        <p>Foto do Cliente: </p>
+        <p>Foto do Cliente: <a href="{{route('clients.download', $client->id)}}">Baixar imagem</a> </p>
         <img src="{{ asset('storage/' . str_after($client->photo, 'public/')) }}" 
              alt="" width="600px" >
 
