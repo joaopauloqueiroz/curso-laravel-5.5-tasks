@@ -14,7 +14,7 @@ Route::middleware(['alerttasks','auth'])->group(function (){
     Route::resource('projects','Project\ProjectController');
     Route::resource('tasks', 'TaskController');
 
-    Route::get('tasks/search/{subject}', 'ExtraActions\TaskSearch');
+    Route::post('tasks/search/', 'ExtraActions\TaskSearch');
 
     Route::get('tasks/add/{id}', 'ToDoController@store');
     Route::get('tasks/delete/{id}', 'ToDoController@destroy')->middleware('checktasks');
