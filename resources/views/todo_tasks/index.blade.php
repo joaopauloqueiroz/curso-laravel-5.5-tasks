@@ -29,7 +29,9 @@
                 <td>{{ $task->made ? 'Sim' : 'Não' }}</td>
                 <td>{{ $task->description }}</td>
                 <td>
-                    <a class="btn btn-success"  href="{{ route('tasks.todo_destroy', $task->id) }}">Remover</a> 
+                    <a class="btn btn-success" title="marcar como executada"  href="{{ route('tasks.todo_made', $task->id) }}">Executada</a> 
+
+                    <a class="btn btn-danger" title="remover da lista de tarefas para fazes"  href="{{ route('tasks.todo_destroy', $task->id) }}">Remover</a> 
                 </td>
               </tr>
             @empty

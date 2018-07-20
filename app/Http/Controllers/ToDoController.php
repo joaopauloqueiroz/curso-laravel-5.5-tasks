@@ -41,8 +41,20 @@ class ToDoController extends Controller
         }
         
     }
+    /**
+     * Altera a tarefa no banco de dados para o status de executada
+     */
+    public function made($id)
+    {
+        $result = $this->taskRepository->update($id, [
+            'made'=> 1
+        ]);
+            if($result){
+                return redirect()->route('tasks.todo_destroy', $id);
+            }
+        return back()->with('error','Erro ao marcar como executada a tarefa');
+    }
 
-  
 
     /**
      * Remove the specified resource from storage.
