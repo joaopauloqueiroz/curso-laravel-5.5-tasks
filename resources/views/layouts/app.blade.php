@@ -85,7 +85,7 @@
             @endif
             {{-- verificar alert --}}
             @if(session('alert'))
-                <div class="alert alert-info" >{{ session('alert') }}</div>
+                <div class="alert alert-info" >{!! session('alert') !!}</div>
             @endif
 
             @if($errors->any())

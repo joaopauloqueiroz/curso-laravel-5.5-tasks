@@ -9,4 +9,5 @@ interface TaskRepositoryInterface
    * Por que o QueryBuilder vai ser para todos
    */
   public function getBySubject($subject);
+  public function getByIds(array $ids);
 }
