@@ -10454,9 +10454,9 @@ module.exports = __webpack_require__(7);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(0);
+    window.$ = window.jQuery = __webpack_require__(0);
 
-  __webpack_require__(3);
+    __webpack_require__(3);
 } catch (e) {}
 
 __webpack_require__(6);

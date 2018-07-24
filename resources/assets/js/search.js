@@ -25,7 +25,7 @@ $( document ).ready(function(){
                 
                 items += '<a class="btn btn-success" href="http://localhost:8000/tasks/'+ id +'/edit">Editar</a>';
                 items += '<a class="btn btn-danger">Deletar</a>';
-
+                
               items += '</td>';
 
             items += '</tr>';
