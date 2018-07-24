@@ -46,14 +46,14 @@ class ToDoController extends Controller
     public function made($id)
     {
         $result = $this->taskRepository->update($id, [
-            'made'=> 1
+            'made' => 1
         ]);
         if ($result) {
             return redirect()->route('tasks.todo_destroy', $id);
         }
         return back()->with('error', 'Erro ao marcar como executada a tarefa');
     }
-    
+
     /**
      * Remove the specified resource from storage.
      *
@@ -67,7 +67,7 @@ class ToDoController extends Controller
         $id = array_where($ids, function ($value, $key) use ($id) {
             return $value != $id;
         });
-        session(['todotasks'=> $id]);
+        session(['todotasks' => $id]);
 
         return back();
     }
