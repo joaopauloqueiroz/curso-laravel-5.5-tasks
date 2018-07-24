@@ -7,10 +7,8 @@ use App\Repositories\Interfaces\TaskRepositoryInterface;
 
 class ClientSearch extends Controller
 {
-
-  public function __invoke(TaskRepositoryInterface $taskRepository, $subject)
-    { 
-      return $taskRepository->getBySubject($subject);
+    public function __invoke(TaskRepositoryInterface $taskRepository, $subject)
+    {
+        return $taskRepository->getBySubject($subject);
     }
-
 }

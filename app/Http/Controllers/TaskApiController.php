@@ -4,16 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Repositories\Interfaces\TaskRepositoryInterface;
+
 class TaskApiController extends Controller
 {
 
     /**
      * Retorna uma intancia da classe TaskRepository através dessa interface
-     * Atraves do bind no AppServiceprovider 
+     * Atraves do bind no AppServiceprovider
      */
-    public function __construct(TaskRepositoryInterface $taskRepository){
+    public function __construct(TaskRepositoryInterface $taskRepository)
+    {
         $this->taskRepository = $taskRepository;
-
     }
 
     /**
@@ -36,9 +37,9 @@ class TaskApiController extends Controller
      */
     public function store(Request $request)
     {
-        if($this->taskRepository->create($request->all())){
+        if ($this->taskRepository->create($request->all())) {
             return response()->json(['statusCode'=>'201','status'=>'Tarefa salva com sucesso']);
-        }else{
+        } else {
             return response()->json(['statusCode'=>'500','status'=>'Erro ao inserir tarefa']);
         }
     }
@@ -67,11 +68,11 @@ class TaskApiController extends Controller
         $data = [
             'subject' => $request->subject,
             'made'    => $request->made,
-            'description' => $request->description 
+            'description' => $request->description
         ];
-        if($this->taskRepository->update($id,$data)){
+        if ($this->taskRepository->update($id, $data)) {
             return response()->json(['statusCode'=>'200','status'=>'Atualizado com sucesso']);
-        }else{
+        } else {
             return response()->json(['statusCode'=>'500','status'=>'Erro ao atualizar tarefa']);
         }
     }
@@ -84,9 +85,9 @@ class TaskApiController extends Controller
      */
     public function destroy($id)
     {
-        if($this->taskRepository->delete($id)){
+        if ($this->taskRepository->delete($id)) {
             return response()->json(['statusCode'=>'200','status'=>'Deletado com sucesso']);
-        }else{
+        } else {
             return response()->json(['statusCode'=>'204', 'status'=>'Erro ao deletar']);
         }
     }

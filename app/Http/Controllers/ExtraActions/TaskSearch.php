@@ -8,10 +8,8 @@ use Illuminate\Http\Request;
 
 class TaskSearch extends Controller
 {
-
-  public function __invoke(TaskRepositoryInterface $taskRepository, Request $request)
-    { 
-      return $taskRepository->getBySubject($request->search);
+    public function __invoke(TaskRepositoryInterface $taskRepository, Request $request)
+    {
+        return $taskRepository->getBySubject($request->search);
     }
-
 }

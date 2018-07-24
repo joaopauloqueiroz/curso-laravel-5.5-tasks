@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\Project;
+
 use App\Client;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProjectRequest;
 use App\Http\Controllers\Controller;
+
 //use SebastianBergmann\CodeCoverage\Report\Xml\Project;
 
 class ProjectController extends Controller
@@ -24,10 +26,9 @@ class ProjectController extends Controller
      */
     public function index(Request $request)
     {
-        
         $project = $this->project->all();
 
-       return view('crud.index', compact('project'));
+        return view('crud.index', compact('project'));
     }
 
     /**
@@ -50,14 +51,11 @@ class ProjectController extends Controller
     public function store(ProjectRequest $request)
     {
         $data = $request->all();
-        if(Project::create($data))
-        {
+        if (Project::create($data)) {
             return redirect()->route('projects.index');
-        }else
-        {
+        } else {
             return redirect()->route('projects.create');
         }
-    
     }
 
     /**
@@ -80,7 +78,7 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
         $clients = Client::get();
-        return view('crud.edit', compact('project','clients'));
+        return view('crud.edit', compact('project', 'clients'));
     }
 
     /**
@@ -91,15 +89,13 @@ class ProjectController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(ProjectRequest $request, Project $project)
-    {   
+    {
         $data = $request->all();
 
-        if($project->update($data))
-        {
-            $request->session()->flash('success','Projeto atualizado com sucesso!');
-        }else
-        {
-            $request->session()->flash('error','Não foi possivel atualizar o projeto!');
+        if ($project->update($data)) {
+            $request->session()->flash('success', 'Projeto atualizado com sucesso!');
+        } else {
+            $request->session()->flash('error', 'Não foi possivel atualizar o projeto!');
         }
         return redirect()->route('projects.index');
     }
@@ -112,15 +108,11 @@ class ProjectController extends Controller
      */
     public function destroy(Request $request, Project $project)
     {
-        if($project->delete())
-        {
-            $request->session()->flash('success','Projeto deletado com sucesso!');
+        if ($project->delete()) {
+            $request->session()->flash('success', 'Projeto deletado com sucesso!');
+        } else {
+            $request->session()->flash('error', 'Não foi possivel deletar o projeto!');
         }
-        else
-        {
-            $request->session()->flash('error','Não foi possivel deletar o projeto!');
-        }
-            return redirect()->route('project.index');
-        
+        return redirect()->route('project.index');
     }
 }

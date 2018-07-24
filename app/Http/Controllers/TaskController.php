@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use DB;
 use Illuminate\Http\Request;
 use App\Repositories\Interfaces\TaskRepositoryInterface;
@@ -9,11 +10,11 @@ class TaskController extends Controller
 {
     /**
      * Retorna uma intancia da classe TaskRepository através dessa interface
-     * Atraves do bind no AppServiceprovider 
+     * Atraves do bind no AppServiceprovider
      */
-    public function __construct(TaskRepositoryInterface $taskRepository){
+    public function __construct(TaskRepositoryInterface $taskRepository)
+    {
         $this->taskRepository = $taskRepository;
-
     }
 
     /**
@@ -69,10 +70,11 @@ class TaskController extends Controller
      */
     public function show($id)
     {
+        $projects  = \App\Models\Project::get();
         //buscar um unico registro
-        $task = DB::table('tasks')->where('id', $id)->first();
+        $task = $this->taskRepository->find($id);
 
-        return view('tasks.show', compact('task'));
+        return view('tasks.show', compact('task', 'projects'));
     }
 
     /**

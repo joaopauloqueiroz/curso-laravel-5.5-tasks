@@ -6,10 +6,8 @@ use App\Http\Controllers\Controller;
 
 class ClientPdf extends Controller
 {
-
-  public function __invoke()
-    { 
-      return "estou no pdf";
+    public function __invoke()
+    {
+        return "estou no pdf";
     }
-
 }

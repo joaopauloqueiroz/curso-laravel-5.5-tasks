@@ -9,20 +9,20 @@ class ToDoController extends Controller
 {
     /**
      * Retorna uma intancia da classe TaskRepository através dessa interface
-     * Atraves do bind no AppServiceprovider 
+     * Atraves do bind no AppServiceprovider
      */
-    public function __construct(TaskRepositoryInterface $taskRepository){
+    public function __construct(TaskRepositoryInterface $taskRepository)
+    {
         $this->taskRepository = $taskRepository;
-
     }
 
     public function index()
     {
-       $ids = session('todotasks');
+        $ids = session('todotasks');
 
-       $tasks = $this->taskRepository->getByIds($ids);
+        $tasks = $this->taskRepository->getByIds($ids);
 
-       return view('todo_tasks.index', compact('tasks'));
+        return view('todo_tasks.index', compact('tasks'));
     }
 
     /**
@@ -33,13 +33,12 @@ class ToDoController extends Controller
      */
     public function store(Request $request, $id)
     {
-        if($this->taskRepository->find($id)){
+        if ($this->taskRepository->find($id)) {
             $request->session()->push('todotasks', $id);
             return back();
-        }else{
-            return back()->with('error','Não foi possivel adicionar a tarefa na lista de pendentes');
+        } else {
+            return back()->with('error', 'Não foi possivel adicionar a tarefa na lista de pendentes');
         }
-        
     }
     /**
      * Altera a tarefa no banco de dados para o status de executada
@@ -49,13 +48,12 @@ class ToDoController extends Controller
         $result = $this->taskRepository->update($id, [
             'made'=> 1
         ]);
-            if($result){
-                return redirect()->route('tasks.todo_destroy', $id);
-            }
-        return back()->with('error','Erro ao marcar como executada a tarefa');
+        if ($result) {
+            return redirect()->route('tasks.todo_destroy', $id);
+        }
+        return back()->with('error', 'Erro ao marcar como executada a tarefa');
     }
-
-
+    
     /**
      * Remove the specified resource from storage.
      *
@@ -66,11 +64,11 @@ class ToDoController extends Controller
     {
         $ids = session('todotasks');
 
-        $id = array_where($ids, function($value, $key) use ($id){
+        $id = array_where($ids, function ($value, $key) use ($id) {
             return $value != $id;
         });
         session(['todotasks'=> $id]);
 
-        return back();   
+        return back();
     }
 }

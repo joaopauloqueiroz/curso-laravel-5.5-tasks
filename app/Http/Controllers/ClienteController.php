@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Log;
 use Gate;
 use Auth;
@@ -18,13 +19,13 @@ class ClienteController extends Controller
      */
     private $client;
     protected $treina;
-    public  function __construct(Client $client)
+    public function __construct(Client $client)
     {
-        //aplicar so em um 
-       //$this->middleware('alerttasks')->only('index');
+        //aplicar so em um
+        //$this->middleware('alerttasks')->only('index');
         $this->client = $client;
                
-       $this->middleware('alerttasks');
+        $this->middleware('alerttasks');
     }
 
     public function index(Request $request)
@@ -57,7 +58,7 @@ class ClienteController extends Controller
          *
          */
         
-         return view('clients.create');
+        return view('clients.create');
     }
 
     /**
@@ -74,10 +75,10 @@ class ClienteController extends Controller
         $data['user_id'] = Auth::User()->id;
         $data['photo'] = $request->photo->store('public');
         
-        if(Client::create($data)){
-            $request->session()->flash('success','Cliente cadastrado com sucesso!');
-        }else{
-            $request->session()->flash('error','Erro ao cadastrar cliente!');
+        if (Client::create($data)) {
+            $request->session()->flash('success', 'Cliente cadastrado com sucesso!');
+        } else {
+            $request->session()->flash('error', 'Erro ao cadastrar cliente!');
         }
         
         return redirect()->route('clients.index');
@@ -106,10 +107,10 @@ class ClienteController extends Controller
         //$client = $this->client->findOrFail($id);
 
         //verificar se o usuario tem permissão de editar
-       //$this->authorize('update-client', $client);
+        //$this->authorize('update-client', $client);
        
-       //assim podemos redirecionar pra uma view especifica
-       if(Gate::denies('update-client', $client)){
+        //assim podemos redirecionar pra uma view especifica
+        if (Gate::denies('update-client', $client)) {
             return view('clients.error');
         }
 
@@ -125,7 +126,6 @@ class ClienteController extends Controller
      */
     public function update(Request $request, Client $client)
     {
-
         $this->validate($request, $this->client->rulesUpdate);
         $data = $request->all();
 
@@ -136,10 +136,10 @@ class ClienteController extends Controller
         //verificar se o usuario tem  permissão para atualizar o registro
         $this->authorize('update-client', $client);
                
-        if($client->update($data)){
-            $request->session()->flash('success','Cliente atualizado com sucesso!');
-        }else{
-            $request->session()->flash('error','Erro ao atualizar cliente!');
+        if ($client->update($data)) {
+            $request->session()->flash('success', 'Cliente atualizado com sucesso!');
+        } else {
+            $request->session()->flash('error', 'Erro ao atualizar cliente!');
         }
         
         return redirect()->route('clients.index');
@@ -155,14 +155,14 @@ class ClienteController extends Controller
     {
        
          //verificar se o usuario tem  permissão para deletar o registro
-       $this->authorize('update-client', $client);
+        $this->authorize('update-client', $client);
       
-        if($client->delete()){
-            $request->session()->flash('success','Cliente deletado com sucesso!');
-        }else{
-            $request->session()->flash('error','Erro ao deletar o cliente!');
+        if ($client->delete()) {
+            $request->session()->flash('success', 'Cliente deletado com sucesso!');
+        } else {
+            $request->session()->flash('error', 'Erro ao deletar o cliente!');
         }
 
-        return redirect()->route('clients.index');   
+        return redirect()->route('clients.index');
     }
 }
